@@ -1,0 +1,52 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#005c74",
+    "activityBar.background": "#007e9d",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#227d22",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#0046a1",
+    "statusBar.background": "#193373",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#007e9d",
+    "statusBarItem.remoteBackground": "#193373",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#193373",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#0046a1",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.tslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "eslint.format.enable": true,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "files.eol": "\n",
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on"
+}

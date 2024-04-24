@@ -1,0 +1,40 @@
+version: '3.7'
+
+networks:
+  internal_network:
+    name: internal_network
+    driver: bridge
+
+services:
+  sample_template_db:
+    image: postgres:15
+    restart: always
+    env_file: .env
+    container_name: sample_template_db
+    environment:
+      POSTGRES_DB: ${PGSQL_NAME}
+      POSTGRES_PASSWORD: ${PGSQL_PASSWORD}
+      POSTGRES_USER: ${PGSQL_USER}
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - ${PGSQL_PORT}:${PGSQL_PORT}
+    networks:
+      - internal_network
+
+  # sample_template_nestjs:
+  #   image: node:18.16.0-alpine3.17
+  #   container_name: sample_template_nestjs
+  #   working_dir: /usr/src/app
+  #   env_file: .env
+  #   restart: always
+  #   command: sh -c "yarn && yarn build && yarn start:dev"
+  #   ports:
+  #     - ${API_PORT}:${API_PORT}
+  #   depends_on:
+  #     - sample_template_db
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   networks:
+  #     - internal_network
