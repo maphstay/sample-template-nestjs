@@ -1,6 +1,7 @@
-<p>
-  <h1 align="center">Sample template NestJS</h1>
-</p>
+<div align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <p style="font-size: 25px;">Sample template NestJS</p>
+</div>
 
 ## Description
 

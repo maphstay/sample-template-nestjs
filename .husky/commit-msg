@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# Activate commit message pattern
-ENABLE_PATTERN=true
+# Activate commit message pattern validation
+ENABLE_PATTERN=false
 
-# Insert your JIRA key below, like this "KEY1 KEY2 KEY3".
-PROJECT_JIRA_KEYS=""
+# Insert your JIRA key below, like this "KEY1 KEY2".
+PROJECT_JIRA_KEYS="EX"
 COMMIT_MSG_FILE=$1
 COMMIT_MSG=$(cat $1)
 
@@ -12,18 +12,25 @@ COMMIT_MSG=$(cat $1)
 KEYS=$(echo "$PROJECT_JIRA_KEYS" | tr ' ' '|')
 
 # REGEX to ensure that will have one or two JIRA tasks ID in the comment.
-PATTERN="^\[($KEYS)-[0-9]{1,6}\](\[($KEYS)-[0-9]{1,6}\])? (feat|fix|docs|style|refactor|perf|test|chore): .+$"
+PATTERN="^\[($KEYS)-[0-9]{1,6}\](\[($KEYS)-[0-9]{1,6}\])? (feat|fix|docs|style|refactor|perf|test|ci|chore|revert): .+$"
 
 if [ "$ENABLE_PATTERN" = true ]; then
   if ! echo "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
-      echo "ERROR: Your commit message doesn't match with our pattern."
+      echo "***************************************************************************************"
+      echo "❌❌❌ERROR: Your commit message doesn't match with our pattern❌❌❌"
       echo "======================================================================================="
-      echo "HINT: Commit types ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore']"
-      echo "HINT: You can include one or two Jira tasks"
-      echo "HINT: Valid commit message example_1: [$KEYS-123] feat: Implements something"
-      echo "HINT: Valid commit message example_2: [$KEYS-123][$KEYS-321] fix: Solving something"
+      echo "💡HINT: Commit types ['feat','fix','docs','style','refactor','perf','test','ci','chore','revert']"
+      echo "💡HINT: You can include one or two Jira tasks"
+      echo "💡HINT: Valid commit message example_1: [$KEYS-123] feat: Implements something"
+      echo "💡HINT: Valid commit message example_2: [$KEYS-123][$KEYS-321] fix: Solving something"
+      echo "======================================================================================="
+      echo "👉 Any question about conventional commit, visit:"
+      echo "👉 https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/"
+      echo "***************************************************************************************"
       exit 1
   fi
 else
-    echo "INFO: Commit message pattern check is disabled."
+    echo "=========================================================="
+    echo "||⚠️ ADVISE: Skipping commit message pattern validation⚠️ ||"
+    echo "=========================================================="
 fi
