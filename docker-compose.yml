@@ -22,19 +22,19 @@ services:
     networks:
       - internal_network
 
-  # sample_template_nestjs:
-  #   image: node:18.16.0-alpine3.17
-  #   container_name: sample_template_nestjs
-  #   working_dir: /usr/src/app
-  #   env_file: .env
-  #   restart: always
-  #   command: sh -c "yarn && yarn build && yarn start:dev"
-  #   ports:
-  #     - ${API_PORT}:${API_PORT}
-  #   depends_on:
-  #     - sample_template_db
-  #   volumes:
-  #     - .:/usr/src/app
-  #     - /usr/src/app/node_modules
-  #   networks:
-  #     - internal_network
+  sample_template_nestjs:
+    image: node:18.16.0-alpine3.17
+    container_name: sample_template_nestjs
+    working_dir: /usr/src/app
+    env_file: .env
+    restart: always
+    command: sh -c "yarn && yarn build && yarn start:dev"
+    ports:
+      - ${API_PORT}:${API_PORT}
+    depends_on:
+      - sample_template_db
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - internal_network
