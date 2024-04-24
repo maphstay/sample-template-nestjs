@@ -1,13 +1,14 @@
 <div align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-  <p style="font-size: 100px;">Sample template NestJS</p>
+
+  # Sample template NestJS
 </div>
 
-## Description
+## 📋 Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript template repository.
 
-## Features
+## 💡 Features
 
 - [Bcrypt](https://www.npmjs.com/package/bcrypt) password hashing.
 - [Class-transformer](https://www.npmjs.com/package/class-transformer) to handle with data transformation.
@@ -29,13 +30,13 @@
 - [Typeorm](https://typeorm.io/) ORM to help on database handling.
 - [Vscode](https://code.visualstudio.com/) settings.
 
-## Installation
+## 🛠️ Installation
 
 ```bash
 $ yarn install
 ```
 
-## Running the app
+## 🚀 Running the app
 
 ```bash
 # development
@@ -48,7 +49,7 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## Test
+## 💣 Test
 
 ```bash
 # unit tests
@@ -61,7 +62,7 @@ $ yarn run test:e2e
 $ yarn run test:cov
 ```
 
-## Migration
+## ✨ Migration
 
 ```bash
 # migration create
@@ -80,15 +81,15 @@ $ yarn migration:up
 $ yarn migration:down
 ```
 
-## Stay in touch
+## 🧝🏽‍♂️ Author
 
-- Author - [Stefferson Thallys](https://www.linkedin.com/in/stefferson-thallys/)
+[Stefferson Thallys](https://www.linkedin.com/in/stefferson-thallys/)
 
-## Credits
+## 👏🏽 Credits
 
 All credits is to NestJs team that maintain it as an MIT-licensed open source project.</br>
 It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## License
+## 🧾 License
 
 sample-template-nestjs is [MIT licensed](LICENSE).
