@@ -33,55 +33,71 @@
 ## 🛠️ Installation
 
 ```bash
-$ yarn install
+yarn install
 ```
 
 ## 🚀 Running the app
 
+Development
 ```bash
-# development
-$ yarn run start
+yarn run start
+```
 
-# watch mode
-$ yarn run start:dev
+Watch mode
+```bash
+yarn run start:dev
+```
 
-# production mode
-$ yarn run start:prod
+Production mode
+```bash
+yarn run start:prod
 ```
 
 ## 💣 Test
 
+Unit tests
 ```bash
-# unit tests
-$ yarn run test
+yarn run test
+```
 
-# e2e tests
-$ yarn run test:e2e
+e2e tests
+```bash
+yarn run test:e2e
+```
 
-# test coverage
-$ yarn run test:cov
+Test coverage
+```bash
+yarn run test:cov
 ```
 
 ## ✨ Migration
 
+Migration create
 ```bash
-# migration create
-$ yarn migration:create ./src/database/migrations/fileName
-
-# migration generate
-$ yarn migration:generate ./src/database/migrations/fileName
-
-# migration generate
-$ yarn migration:generate ./src/database/migrations/fileName
-
-# migration up
-$ yarn migration:up
-
-# migration down
-$ yarn migration:down
+yarn migration:create ./src/database/migrations/fileName
 ```
 
-## 🧝🏽‍♂️ Author
+Migration generate
+```bash
+yarn migration:generate ./src/database/migrations/fileName
+```
+
+Migration generate
+```bash
+yarn migration:generate ./src/database/migrations/fileName
+```
+
+Migration up
+```bash
+yarn migration:up
+```
+
+Migration down
+```bash
+yarn migration:down
+```
+
+## 👨🏽‍💻 Author
 
 [Stefferson Thallys](https://www.linkedin.com/in/stefferson-thallys/)
 
