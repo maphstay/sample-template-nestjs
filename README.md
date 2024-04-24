@@ -82,11 +82,6 @@ Migration generate
 yarn migration:generate ./src/database/migrations/fileName
 ```
 
-Migration generate
-```bash
-yarn migration:generate ./src/database/migrations/fileName
-```
-
 Migration up
 ```bash
 yarn migration:up
